@@ -13,6 +13,7 @@ import curves from './assets/curves.svg'
 import { Carousel } from "@mantine/carousel";
 import { useEffect, useRef, useState } from "react";
 import { clamp } from "@mantine/hooks";
+import { DataItem } from "../DataItem";
 
 export function App() {
     const spheres = useRef<HTMLCanvasElement | null>(null)
@@ -43,8 +44,8 @@ export function App() {
         sphereField.current = []
 
         for (let i = 0; i < 25; i++) {
-        const x =  canvas.clientWidth * Math.random()
-        const lin = x < half ? clamp(1 - (x / half), 0.3, 1)  : clamp(((x - half) / half), 0.3, 1)
+            const x =  canvas.clientWidth * Math.random()
+            const lin = x < half ? clamp(1 - (x / half), 0.3, 1)  : clamp(((x - half) / half), 0.3, 1)
 
             sphereField.current.push({
                 x: x,
@@ -190,8 +191,11 @@ export function App() {
                     </Group>
                 </Container>
             </header>
+            <Space h={70} />
             <section>
-                <Container></Container>
+                <Container>
+                    <DataItem title="PYTHON SCRIPTS" data="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." stars={1}></DataItem>
+                </Container>
             </section>
             <footer>
                 <Container></Container>

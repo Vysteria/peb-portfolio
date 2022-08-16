@@ -1,0 +1,18 @@
+.dataItem {
+    display: inline-block;
+}
+
+.checked {
+    color: gold;
+}
+
+.star {
+    margin-right: 3px;
+}
+
+.title {
+    color: #CBCDDB;
+    float: left;
+    margin-right: 20px;
+    margin-top: -11px;
+}
