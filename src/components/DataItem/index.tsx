@@ -9,18 +9,23 @@ export interface DataItemProps {
 }
 
 export function DataItem({title, data, stars}: DataItemProps) {
+
+    const starSpans = []
+
+    for (let i = 0; i < stars; i++) {
+        starSpans.push(
+            <span className="fa fa-star checked star"></span>
+        )
+    }
+
     return (
         <div>
             <div className="dataItem">
                 <h1 className="title">
                     {title}
                 </h1>
-                <span className="fa fa-star checked star"></span>
-                <span className="fa fa-star checked star"></span>
-                <span className="fa fa-star checked star"></span>
-                <span className="fa fa-star unchecked star"></span>
-                <span className="fa fa-star unchecked star"></span>
-            
+                
+                { starSpans }
                 <ThiccLine />
             </div>
             <Space h="xl" />
